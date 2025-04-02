@@ -1,19 +1,19 @@
+"use client";
 import Circles from "./Circles";
 import Image from "next/image";
 
-const watch = (props) => {
+const Watch = ({ changeImage, setChangeImage }) => {
   return (
-    <div className="watch">
+    <div class="flex items-center gap-8">
       <Image
-        src="/images/navyWatch.png"
-        alt="Navy watch"
+        src={`/images/${changeImage}.png`}
+        alt="Watch image"
         width={400}
         height={400}
-        priority
       />
-      <Circles />
+      <Circles changeImage={changeImage} setChangeImage={setChangeImage} />
     </div>
   );
 };
 
-export default watch;
+export default Watch;

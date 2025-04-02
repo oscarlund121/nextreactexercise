@@ -1,21 +1,42 @@
-const circle = (props) => {
+"use client";
+
+const Circle = ({ changeImage, setChangeImage }) => {
   return (
-    <div className="dots">
-      <span className="dot navy"></span>
-      <div className="line">
-        <div></div>
-        <div></div>
-        <div></div>
+    <div class="flex flex-col items-center gap-2 p-8">
+      <button
+        onClick={() => setChangeImage("navy")}
+        class={`w-8 h-8 rounded-full border-2 border-white shadow-md transition-transform duration-300 hover:scale-150 ${
+          changeImage === "navy" ? "bg-[#434558]" : "bg-transparent"
+        }`}
+      ></button>
+
+      <div class="flex flex-col justify-between items-center h-10">
+        <div class="w-1 h-1 bg-white rounded-full"></div>
+        <div class="w-1 h-1 bg-white rounded-full"></div>
+        <div class="w-1 h-1 bg-white rounded-full"></div>
       </div>
-      <span className="dot mint"></span>
-      <div className="line">
-        <div></div>
-        <div></div>
-        <div></div>
+
+      <button
+        onClick={() => setChangeImage("mint")}
+        class={`w-8 h-8 rounded-full border-2 border-white shadow-md transition-transform duration-300 hover:scale-150 ${
+          changeImage === "mint" ? "bg-[#6ADDCC]" : "bg-transparent"
+        }`}
+      ></button>
+
+      <div class="flex flex-col justify-between items-center h-10">
+        <div class="w-1 h-1 bg-white rounded-full"></div>
+        <div class="w-1 h-1 bg-white rounded-full"></div>
+        <div class="w-1 h-1 bg-white rounded-full"></div>
       </div>
-      <span className="dot pink"></span>
+
+      <button
+        onClick={() => setChangeImage("ocean")}
+        class={`w-8 h-8 rounded-full border-2 border-white shadow-md transition-transform duration-300 hover:scale-150 ${
+          changeImage === "ocean" ? "bg-[#F9CDC4]" : "bg-transparent"
+        }`}
+      ></button>
     </div>
   );
 };
 
-export default circle;
+export default Circle;

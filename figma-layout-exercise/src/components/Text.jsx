@@ -1,14 +1,14 @@
 import Button from "./Button";
 
-const text = (props) => {
+const Text = () => {
   return (
-    <div className="textContent">
-      <h1>
-        <span>The Perfect Moment</span> Between Past And Future.
+    <div class="flex flex-col justify-center items-start px-10">
+      <h1 class="text-white text-6xl leading-[1.2] pr-7">
+        <span class="font-bold">The Perfect Moment</span> Between Past And Future.
       </h1>
       <Button />
     </div>
   );
 };
 
-export default text;
+export default Text;
